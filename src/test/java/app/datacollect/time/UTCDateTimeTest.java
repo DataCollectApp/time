@@ -38,6 +38,11 @@ public class UTCDateTimeTest {
   }
 
   @Test
+  public void when_millisecond_is_added_should_return_expected_value() {
+    assertEquals("2019-01-01T12:00:00.001Z", time.plusMilliseconds(1).iso8601());
+  }
+
+  @Test
   public void when_second_is_added_should_return_expected_value() {
     assertEquals("2019-01-01T12:00:01Z", time.plusSeconds(1).iso8601());
   }
@@ -55,6 +60,11 @@ public class UTCDateTimeTest {
   @Test
   public void when_day_is_added_should_return_expected_value() {
     assertEquals("2019-01-02T12:00:00Z", time.plusDays(1).iso8601());
+  }
+
+  @Test
+  public void when_millisecond_is_subtracted_should_return_expected_value() {
+    assertEquals("2019-01-01T11:59:59.999Z", time.minusMilliseconds(1).iso8601());
   }
 
   @Test

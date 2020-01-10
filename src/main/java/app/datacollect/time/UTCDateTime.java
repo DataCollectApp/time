@@ -68,6 +68,10 @@ public class UTCDateTime {
     return new UTCDateTime(instant.minusSeconds(seconds));
   }
 
+  public UTCDateTime minusMilliseconds(int milliseconds) {
+    return new UTCDateTime(instant.minusMillis(milliseconds));
+  }
+
   public UTCDateTime plusDays(int days) {
     return new UTCDateTime(instant.plus(days, ChronoUnit.DAYS));
   }
@@ -82,5 +86,9 @@ public class UTCDateTime {
 
   public UTCDateTime plusSeconds(int seconds) {
     return new UTCDateTime(instant.plusSeconds(seconds));
+  }
+
+  public UTCDateTime plusMilliseconds(int milliseconds) {
+    return new UTCDateTime(instant.plusMillis(milliseconds));
   }
 }
